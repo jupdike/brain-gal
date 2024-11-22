@@ -12,7 +12,7 @@
   <body>
     <div class="saira-main-title mt-4" style="font-size: 200%; text-transform: uppercase;"><Title/></div>
     <ThoughtYearGrouper>
-      <Data2/>
+      <Data/>
     </ThoughtYearGrouper>
   </body>
 </html>
