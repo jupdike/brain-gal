@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="custom.css"></link>
   </head>
   <body>
-    <div class="saira-main-title mt-4" style="font-size: 200%; text-transform: uppercase;"><Title/></div>
+    <div class="saira-main-title m-2" style="color: #ccc; font-size: 300%; text-transform: uppercase;"><Title/></div>
     <ThoughtYearGrouper>
       <Data/>
     </ThoughtYearGrouper>
   </body>
 </html>
+
