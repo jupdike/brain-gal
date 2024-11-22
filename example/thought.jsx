@@ -23,7 +23,7 @@ const Thought = (props) => {
             ? <img src={json.imgsrc} class="saira-card-img" alt={"Movie poster for "+props.title.substring(5)} />
             : <div class="emptyposter">&nbsp;</div> }
         <a href={json.href} target="bnlank">
-            <div class="text-l saira-card-title pt-2">{props.title.substring(5)}</div>
+            <div class="text-l saira-card-title pt-2 px-1">{props.title.substring(5)}</div>
         </a>
     </div>
 }
