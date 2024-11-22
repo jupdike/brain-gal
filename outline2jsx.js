@@ -177,12 +177,29 @@ function parents2jsx(graph, childName, parentGens) {
   let parents = parentsOf.get(childName);
   parents.sort();
   let pieces = [];
+  let urls = urlsFor.get(childName);
+  if(urls) {
+    for(let url of urls) {
+      pieces.push(`\t<A href="${url}" />`);
+    }
+  }
   for(let parent of parents) {
     if(parentGens - 1 > 0) {
       let more = parents2jsx(graph, parent, parentGens - 1);
       pieces.push(`\t<Parent title="${parent}">${more}</Parent>`);
     } else {
-      pieces.push(`\t<Parent title="${parent}" />`);
+      let ps = [];
+      let urls = urlsFor.get(parent);
+      if(urls) {
+        for(let url of urls) {
+          ps.push(`\t<A href="${url}">${ps}</A>`);
+        }
+      }
+      if(ps.length) {
+        pieces.push(`\t<Parent title="${parent}">\n${ps.join('\n')}\n\t</Parent>`);
+      } else {
+        pieces.push(`\t<Parent title="${parent}" />`);
+      }
     }
   }
   return pieces.join('\n');
