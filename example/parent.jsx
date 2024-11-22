@@ -1,4 +1,3 @@
-<p>
-{props.title}
-• {props.children}
-</p>
+<div data-title={props.title}>
+{props.children}
+</div>

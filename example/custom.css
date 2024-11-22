@@ -9,17 +9,22 @@ body {
 .card {
   display: inline-block;
   width: 140px;
+  height: 312px;
   background: #999;
   padding: 0.25rem;
   margin: 0.25rem;
   vertical-align: top;
 }
 
-.card img {
+.card img, .emptyposter {
   width: auto;
   height: 180px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.emptyposter {
+  background: #ccc;
 }
 
 h3 {
@@ -50,11 +55,12 @@ h3 {
 .saira-card-title {
   font-family: "Saira", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-weight: 600;
   font-style: normal;
-  font-size: 120%;
+  font-size: 140%;
+  line-height: 1.4rem;
   font-variation-settings:
-    "wdth" 75;
+    "wdth" 85;
 }
 
 .saira-year {
