@@ -180,9 +180,9 @@ function parents2jsx(graph, childName, parentGens) {
   for(let parent of parents) {
     if(parentGens - 1 > 0) {
       let more = parents2jsx(graph, parent, parentGens - 1);
-      pieces.push(`\t<Parent title='${parent}'>${more}</Parent>`);
+      pieces.push(`\t<Parent title="${parent}">${more}</Parent>`);
     } else {
-      pieces.push(`\t<Parent title='${parent}' />`);
+      pieces.push(`\t<Parent title="${parent}" />`);
     }
   }
   return pieces.join('\n');
@@ -199,7 +199,7 @@ function graph2jsx(graph, parentThoughtName, withTag='Thought', parentGens=2) {
     let urls = urlsFor.get(child);
     if(urls) {
       for(let url of urls) {
-        body.push(`\t<A href='${url}' />`);
+        body.push(`\t<A href="${url}" />`);
       }
     }
     let parents = parentsOf.get(child);
@@ -211,13 +211,13 @@ function graph2jsx(graph, parentThoughtName, withTag='Thought', parentGens=2) {
         }
         if(parentGens - 1 > 0) {
           let more = parents2jsx(graph, parent, parentGens - 1);
-          body.push(`\t<Parent title='${parent}'>${more}</Parent>`);
+          body.push(`\t<Parent title="${parent}">${more}</Parent>`);
         } else {
-          body.push(`\t<Parent title='${parent}' />`);
+          body.push(`\t<Parent title="${parent}" />`);
         }
       }
     }
-    let str = `<${withTag} title='${child}'>\n${body.join('\n')}\n</${withTag}>`;
+    let str = `<${withTag} title="${child}">\n${body.join('\n')}\n</${withTag}>`;
     pieces.push(str);
 
     //console.log(str);

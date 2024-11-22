@@ -74,9 +74,51 @@ li {
 }
 .card {
   display: inline-block;
-  width: 240px;
-  /* height: 360px; */
+  width: 140px;
   background: #999;
   padding: 0.25rem;
   margin: 0.25rem;
+  vertical-align: top;
+}
+
+.card img {
+  width: auto;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+.saira-main-title {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 125;
+}
+
+.saira-main-subtitle {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 50;
+}
+
+.saira-card-title {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 120%;
+  font-variation-settings:
+    "wdth" 75;
 }

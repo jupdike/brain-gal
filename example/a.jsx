@@ -3,6 +3,6 @@ const A = (props) => {
     if(lower.endsWith('.png') || lower.endsWith('.jpg') || lower.endsWith('.gif')) {
         return <img src={props.href} class="poster" />;
     }
-    return <u>URL here</u>;
+    return <a href={props.href}>URL here</a>;
 }
 
