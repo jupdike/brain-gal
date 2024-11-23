@@ -1,5 +1,5 @@
 // keep a parent, but only if parent of parent (pop) is one of these
-const popKeepers = ["By Tag", "Person", "Organization"];
+const popKeepers = ["By Tag", "Person", "Organization", "Place"];
 
 function hasHref(props) {
     if(props.href) {
@@ -38,6 +38,7 @@ const strToEmoji = {
     "Thumbs Down": "👎",
     "Play Me": "▶️",
     "Not for Kids": "🚫", // 🧔🏻‍♂️
+    "Place": "🌐",
 }
 
 const Parent = (props) => {

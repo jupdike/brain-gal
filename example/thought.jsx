@@ -25,7 +25,7 @@ const Thought = (props) => {
         {json.imgsrc
             ? <img src={json.imgsrc} class="saira-card-img" alt={"Movie poster for "+props.title.substring(5)} />
             : <div class="emptyposter">&nbsp;</div> }
-        <a href={json.href} target="bnlank">
+        <a href={json.href} target="_blank">
             <div class="text-l saira-card-title pt-2 px-1">{props.title.substring(5)}</div>
         </a>
         {/* force desired ordered */}
