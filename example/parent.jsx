@@ -1,35 +1,10 @@
 // keep a parent, but only if parent of parent (pop) is one of these
 const popKeepers = ["By Tag", "Person", "Organization"];
 
-// function hasAllowedPop(props) {
-//     if(!props.children || props.children.length == 0 || props.children[0].length == 0) {
-//         return false;
-//     }
-//     console.error('hasAllowedPop1:', props);
-//     console.error('hasAllowedPop2:', props.children);
-//     let guts = BrayElem.childrenWithoutWhitespaceStrings(props.children[0][0].props.children).map(x => x.props);
-//     console.error('hasAllowedPop3:', guts);
-//     //let hasAny = guts.filter((x) => x.title && popKeepers.includes(x.title)).length > 0;
-//     //return props.title && hasAny;
-//     return false;
-// }
-
 function hasHref(props) {
     if(props.href) {
         return props.href;
     }
-    // if(!props.children || props.children.length == 0 || props.children[0].length == 0) {
-    //     return false;
-    // }
-    // // if(props.href) {
-    // //     return props.href;
-    // // }
-    // console.error('hasAllowedPop1:', props);
-    // console.error('hasAllowedPop2:', props.children);
-    // let guts = BrayElem.childrenWithoutWhitespaceStrings(props.children[0][0].props.children).map(x => x.props);
-    // console.error('hasAllowedPop3:', guts);
-    // //let hasAny = guts.filter((x) => x.title && popKeepers.includes(x.title)).length > 0;
-    // //return props.title && hasAny;
     return null;
 }
 
