@@ -9,11 +9,12 @@ body {
 .card {
   display: inline-block;
   width: 140px;
-  height: 312px;
+  height: 284px;
   background: #999;
   padding: 0.25rem;
   margin: 0.25rem;
   vertical-align: top;
+  overflow: hidden;
 }
 
 .card img, .emptyposter {
@@ -57,11 +58,22 @@ h3 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 140%;
+  font-size: 120%;
   line-height: 1.4rem;
   font-variation-settings:
-    "wdth" 85;
+    "wdth" 100;
 }
+
+.narrow-95 { font-variation-settings: "wdth" 95; font-weight: 500; font-size: 121% }
+.narrow-90 { font-variation-settings: "wdth" 90; font-weight: 525; font-size: 122% }
+.narrow-85 { font-variation-settings: "wdth" 85; font-weight: 550; font-size: 123% }
+.narrow-80 { font-variation-settings: "wdth" 80; font-weight: 575; font-size: 124% }
+.narrow-75 { font-variation-settings: "wdth" 75; font-weight: 600; font-size: 125% }
+.narrow-70 { font-variation-settings: "wdth" 70; font-weight: 625; font-size: 126% }
+.narrow-65 { font-variation-settings: "wdth" 65; font-weight: 650; font-size: 127% }
+.narrow-60 { font-variation-settings: "wdth" 60; font-weight: 675; font-size: 128% }
+.narrow-55 { font-variation-settings: "wdth" 55; font-weight: 700; font-size: 129% }
+.narrow-50 { font-variation-settings: "wdth" 50; font-weight: 700; font-size: 130% }
 
 .saira-year {
   font-family: "Saira", sans-serif;
