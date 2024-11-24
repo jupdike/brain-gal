@@ -9,8 +9,9 @@ function hasHref(props) {
 }
 
 function isAllowed(x) {
-    // console.error('isAllowed:', x);
-    return popKeepers.includes(x);
+    const ret = popKeepers.includes(x);
+    //console.error('isAllowed:', x, ret);
+    return ret;
 }
 
 function getParentJson(props) {
@@ -19,6 +20,7 @@ function getParentJson(props) {
     // if(guts.length > 0) {
     //     console.error('getParentJson -- guts:', guts);
     // }
+    //console.error('getParentJson - props.title:', props.title);
     guts.filter((x) => x.title && isAllowed(x.title)).forEach(x => { ret.ptitle = props.title; ret.ptype = x.title; });
     guts.filter((x) => hasHref(x)).forEach(x => { ret.phref = hasHref(x); });
     // if(Object.keys(ret).length > 0) {
@@ -35,8 +37,10 @@ const strToEmoji = {
     "Find": "🟩",
     "Yes": "✅",
     "Replace/Update": "❇️",
+    "Mixed Animation/Live Action": "☯️",
     "Thumbs Down": "👎",
     "Play Me": "▶️",
+    "Stop Motion": "📸",
     "Not for Kids": "🚫", // 🧔🏻‍♂️
     "Place": "🌐",
 }
@@ -44,7 +48,10 @@ const strToEmoji = {
 const Parent = (props) => {
     let json = getParentJson(props);
     if(json.ptype == "By Tag") {
-        return <span kind="tag">{strToEmoji[json.ptitle]}</span>;
+        return <span title={props.title} kind="tag">{strToEmoji[json.ptitle]}</span>;
+    }
+    if(json.ptype && json.ptitle && !json.phref) {
+        console.error('Parent missing Href:', json);
     }
     if(json.ptype && json.phref && json.ptitle) {
         return <Maker kind="maker" href={json.phref} title={json.ptitle} type={json.ptype} />;

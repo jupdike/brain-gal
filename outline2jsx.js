@@ -175,6 +175,9 @@ function linesToGraph(lines) {
 function parents2jsx(graph, childName, parentGens) {
   let { parentsOf, childrenOf, urlsFor } = graph;
   let parents = parentsOf.get(childName);
+  if(!parents) {
+    parents = [];
+  }
   parents.sort();
   let pieces = [];
   let urls = urlsFor.get(childName);
