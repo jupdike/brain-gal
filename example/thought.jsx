@@ -1,6 +1,6 @@
 function isImg(x) {
     let lower = x.toLowerCase();
-    return lower.endsWith('.png') || lower.endsWith('.jpg') || lower.endsWith('.gif');
+    return lower.endsWith('.png') || lower.endsWith('.jpeg') || lower.endsWith('.jpg') || lower.endsWith('.gif');
 }
 
 // TODO need a way to check parent of parent
@@ -23,7 +23,7 @@ const Thought = (props) => {
     const kids = BrayElem.childrenWithoutWhitespaceStrings(props.children);
     return <div class="card rounded" data-title={props.title}>
         {json.imgsrc
-            ? <img src={json.imgsrc} class="saira-card-img" alt={"Movie poster for "+props.title.substring(5)} />
+            ? <img src={json.imgsrc} alt={"Movie poster for "+props.title.substring(5)} />
             : <div class="emptyposter">&nbsp;</div> }
         <a href={json.href} target="_blank">
             <CardTitle title={props.title.substring(5)} />

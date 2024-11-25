@@ -1,5 +1,5 @@
 // keep a parent, but only if parent of parent (pop) is one of these
-const popKeepers = ["By Tag", "Person", "Organization", "Place"];
+const popKeepers = ["By Tag", "Person", "Organization", "Place", "Organization, Defunct"];
 
 function hasHref(props) {
     if(props.href) {
@@ -31,8 +31,10 @@ function getParentJson(props) {
 
 const strToEmoji = {
     "By Tag": "🏷️", // not used
+    "2-D": "✏️",
     "Person": "👤",
     "Organization": "🏢",
+    "Organization, Defunct": "⚰️",
     "Upcoming": "⏱️",
     "Find": "🟩",
     "Yes": "✅",
@@ -50,11 +52,12 @@ const Parent = (props) => {
     if(json.ptype == "By Tag") {
         return <span title={props.title} kind="tag">{strToEmoji[json.ptitle]}</span>;
     }
-    if(json.ptype && json.ptitle && !json.phref) {
-        console.error('Parent missing Href:', json);
-    }
-    if(json.ptype && json.phref && json.ptitle) {
+    else if(json.ptype && json.phref && json.ptitle) {
         return <Maker kind="maker" href={json.phref} title={json.ptitle} type={json.ptype} />;
     }
+    else {
+        console.error('Skipping', props.title, '::', json);
+    }
+
     return <div kind="skip" title={props.title}> </div>; // empty div for types that are not relevant to the visualization
 }
