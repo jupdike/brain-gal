@@ -23,13 +23,15 @@ const Thought = (props) => {
     const kids = BrayElem.childrenWithoutWhitespaceStrings(props.children);
     return <div class="card rounded" data-title={props.title}>
         {json.imgsrc
-            ? <img src={json.imgsrc} alt={"Movie poster for "+props.title.substring(5)} />
-            : <div class="emptyposter">&nbsp;</div> }
+            ? <img src={json.imgsrc} class="rounded" alt={"Movie poster for "+props.title.substring(5)} />
+            : <div class="rounded emptyposter">&nbsp;</div> }
         <a href={json.href} target="_blank">
             <CardTitle title={props.title.substring(5)} />
         </a>
-        {/* force desired ordered */}
-        {kids.filter(kid => kid.props.kind == "tag")}
-        {kids.filter(kid => kid.props.kind == "maker")}
+        <div class="card-body">
+            {/* force desired ordered */}
+            {kids.filter(kid => kid.props.kind == "tag")}
+            {kids.filter(kid => kid.props.kind == "maker")}
+        </div>
     </div>
 }

@@ -56,7 +56,7 @@ const Parent = (props) => {
         return <Maker kind="maker" href={json.phref} title={json.ptitle} type={json.ptype} />;
     }
     else {
-        console.error('Skipping', props.title, '::', json);
+        //console.error('Skipping', props.title, '::', json);
     }
 
     return <div kind="skip" title={props.title}> </div>; // empty div for types that are not relevant to the visualization
