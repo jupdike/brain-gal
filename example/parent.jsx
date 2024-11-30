@@ -32,6 +32,7 @@ function getParentJson(props) {
 const strToEmoji = {
     "By Tag": "🏷️", // not used
     "2-D": "✏️",
+    "CGI": "🖥️",
     "Person": "👤",
     "Organization": "🏢",
     "Organization, Defunct": "⚰️",
