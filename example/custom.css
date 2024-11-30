@@ -45,10 +45,11 @@ h3 {
 .saira-main-title {
   font-family: "Saira", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-weight: 600;
   font-style: normal;
-  font-size: calc(37vw - 1rem);
+  font-size: calc(38.4vw - 1.1rem);
   line-height: 80%;
+  letter-spacing: -1vw;
   font-variation-settings:
     "wdth" 50;
 }

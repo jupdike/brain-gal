@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="custom.css"></link>
   </head>
   <body>
-    <div class="pt-2 saira-main-title m-2" style="color: #ccc; text-transform: uppercase;"><Title/></div>
+    <div class="pt-2 saira-main-title m-2" style="color: #666; text-transform: uppercase;"><Title/></div>
     <ThoughtYearGrouper>
       <Data/>
     </ThoughtYearGrouper>
