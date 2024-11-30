@@ -21,7 +21,7 @@ function getJson(props) {
 const Thought = (props) => {
     const json = getJson(props);
     const kids = BrayElem.childrenWithoutWhitespaceStrings(props.children);
-    return <div class="card rounded" data-title={props.title}>
+    return <div class="card shadow-md rounded" data-title={props.title}>
         {json.imgsrc
             ? <img src={json.imgsrc} class="rounded" alt={"Movie poster for "+props.title.substring(5)} />
             : <div class="rounded emptyposter">&nbsp;</div> }
