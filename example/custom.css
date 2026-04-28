@@ -47,7 +47,7 @@ h3 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: calc(38.4vw - 1.1rem);
+  font-size: calc(38.4vw - 1.6rem);
   line-height: 80%;
   letter-spacing: -1vw;
   font-variation-settings:
@@ -58,7 +58,7 @@ h3 {
   font-family: "Saira", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  font-size: calc(7.4vw - 0.2rem);
+  font-size: calc(7.4vw - 0.3rem);
   font-style: normal;
   line-height: 80%;
   font-variation-settings:
